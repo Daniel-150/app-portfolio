@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    
+</head>
+<body class="bg-light">
+
+      <header>
+    <nav>
+       <h1 class="display-3 fw-bold text-white mb-4">Porfolio</h1>
+        
+        <!-- Botón Hamburguesa -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+           <span></span>
+           <span></span>
+           <span></span>
+        </button>
+
+        <ul class="menu" id="menu">
+            
+           <li><a href="#">mis trabajos</a> </li> 
+
+           <li> <a href="#">sobre mi</a></li>
+
+           <li> <a href="#">contacto</a></li>
+           
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="vh-100 d-flex align-items-center bg-dark" style="background-color: #121212;">
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <!-- Logo Circular (Centrado) -->
+      <div class="col-12 mb-4">
+        <div class="logo mx-auto">
+          <img src="/img/foto1.jpeg" alt="Tu Logo">
+        </div>
+      </div>
+
+      <!-- Nombre y Descripción -->
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bold text-white mb-3 animate-fade-in">Tu Nombre</h1>
+        <p class="lead text-light opacity-75 mb-4 animate-fade-in delay-1">Desarrollador Full Stack | Especialista en Spring Boot y React</p>
+
+         <!-- Botón para Descargar CV -->
+  <a href="ruta-de-tu-cv.pdf" download class="btn btn-outline-light btn-lg px-4 py-2">
+    <i class="bi bi-download me-2"></i>Descargar CV
+  </a>
+
+      </div>
+    </div>
+  </div>
+</style>
+
+<!-- Estilos (agrega esto a tu CSS) -->
+<style>
+  /* Logo Circular (usando el CSS que ya teníamos) */
+  .logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #121212;
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .logo:hover {
+    border-color: #555;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+  .logo img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Animaciones */
+  .animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  .delay-1 {
+    animation-delay: 0.3s;
+  }
+  .delay-2 {
+    animation-delay: 0.6s;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+</style>
+    
+</header>
+
+     <section class="py-5 bg-dark" style="background-color: #121212;">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">Mis Proyectos</h2>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark border-0 shadow-lg h-100 hover-scale">
+          <img src="/img/proyecto1.png" class="card-img-top" alt="Proyecto 1">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="badge bg-primary me-2">React</span>
+              <span class="badge bg-success">Node.js</span>
+            </div>
+            <h3 class="h5 text-white">E-commerce</h3>
+            <p class="text-light opacity-75">Tienda online con carrito de compras y pasarela de pago.</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="btn btn-outline-light btn-sm">Ver Demo</a>
+            <a href="#" class="btn btn-link text-primary btn-sm">Código</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark border-0 shadow-lg h-100 hover-scale">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 2">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="badge bg-danger me-2">Spring Boot</span>
+              <span class="badge bg-info">MongoDB</span>
+            </div>
+            <h3 class="h5 text-white">API REST</h3>
+            <p class="text-light opacity-75">Backend para gestión de usuarios con autenticación JWT.</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="btn btn-outline-light btn-sm">Ver Demo</a>
+            <a href="#" class="btn btn-link text-primary btn-sm">Código</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark border-0 shadow-lg h-100 hover-scale">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Proyecto 3">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="badge bg-warning me-2">JavaScript</span>
+              <span class="badge bg-purple">CSS3</span>
+            </div>
+            <h3 class="h5 text-white">Portfolio Creativo</h3>
+            <p class="text-light opacity-75">Diseño interactivo con animaciones GSAP.</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <a href="#" class="btn btn-outline-light btn-sm">Ver Demo</a>
+            <a href="#" class="btn btn-link text-primary btn-sm">Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  .bg-purple {
+    background-color: #6f42c1 !important;
+  }
+</style>
+
+     <!-- Sección Skills -->
+<section class="py-5 bg-dark" id="skills" style="background-color: #121212;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="text-white mb-5">Habilidades Técnicas</h2>
+        <p class="lead text-light opacity-75 mb-5">Lenguajes, herramientas y frameworks que domino.</p>
+      </div>
+    </div>
+
+    <!-- Grid de Skills -->
+    <div class="row g-4">
+      <!-- Lenguajes -->
+      <div class="col-md-6">
+        <div class="skill-card p-4 bg-dark-2 rounded-4 h-100">
+          <h3 class="h5 text-white mb-4"><i class="bi bi-code-slash me-2"></i>Lenguajes</h3>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" alt="Java">
+              <span class="d-block text-white mt-2">Java</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" alt="JavaScript">
+              <span class="d-block text-white mt-2">JavaScript</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" alt="HTML">
+              <span class="d-block text-white mt-2">HTML5</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" alt="CSS">
+              <span class="d-block text-white mt-2">CSS3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frameworks y Herramientas -->
+      <div class="col-md-6">
+        <div class="skill-card p-4 bg-dark-2 rounded-4 h-100">
+          <h3 class="h5 text-white mb-4"><i class="bi bi-tools me-2"></i>Frameworks & Herramientas</h3>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="50" alt="Spring">
+              <span class="d-block text-white mt-2">Spring</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50" alt="VSCode">
+              <span class="d-block text-white mt-2">VSCode</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50" alt="GitHub">
+              <span class="d-block text-white mt-2">GitHub</span>
+            </div>
+            <div class="skill-item text-center">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" alt="Git">
+              <span class="d-block text-white mt-2">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bg-dark-2 {
+    background-color: #1e1e1e; /* Un tono un poco más claro que el fondo */
+    border: 1px solid #333; /* Borde sutil */
+  }
+  .skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+  .skill-item {
+    transition: transform 0.2s ease;
+  }
+  .skill-item:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+      <!-- Sección Contacto -->
+<section id="contacto" class="py-5 bg-dark" style="background-color: #121212;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <h2 class="display-5 fw-bold text-white mb-3">📬 Contacto</h2>
+        <p class="lead text-light opacity-75">¿Interesado en mi perfil? ¡Hablemos! Estoy abierto a oportunidades de pasantías y colaboraciones.</p>
+      </div>
+    </div>
+
+    <!-- Tarjetas de Contacto -->
+    <div class="row g-4 mb-5">
+      <!-- Email -->
+      <div class="col-md-4">
+  
+        <div class="contacto-item bg-dark-2 p-4 rounded-4 h-100 hover-scale text-center">
+          <div class="icono-contacto mb-3">
+            <i class="bi bi-envelope-fill text-primary fs-3"></i>
+          </div>
+          <div class="info-contacto">
+            <h5 class="text-white mb-2">Email</h5>
+            <a href="mailto:mendietadaniel150@gmail.com" class="text-light opacity-75 text-decoration-none">mendietadaniel150@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-md-4">
+        <div class="contacto-item bg-dark-2 p-4 rounded-4 h-100 hover-scale text-center">
+          <div class="icono-contacto mb-3">
+            <i class="bi bi-github text-primary fs-3"></i>
+          </div>
+          <div class="info-contacto">
+            <h5 class="text-white mb-2">GitHub</h5>
+            <a href="https://github.com/Daniel-150" target="_blank" class="text-light opacity-75 text-decoration-none">Daniel-150</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-md-4">
+        <div class="contacto-item bg-dark-2 p-4 rounded-4 h-100 hover-scale text-center">
+          <div class="icono-contacto mb-3">
+            <i class="bi bi-linkedin text-primary fs-3"></i>
+          </div>
+          <div class="info-contacto">
+            <h5 class="text-white mb-2">LinkedIn</h5>
+            <a href="https://www.linkedin.com/in/daniel-mendieta-309727202/" target="_blank" class="text-light opacity-75 text-decoration-none">Daniel Mendieta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="bg-dark-2 p-4 p-md-5 rounded-4">
+          <!-- Mensajes de éxito/error (si usas Thymeleaf) -->
+          <div th:if="${exito}" class="alert alert-success" th:text="${exito}"></div>
+          <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
+
+          <form th:action="@{/contacto/enviar}" method="post" class="mt-3">
+            <div class="mb-3">
+              <input type="text" name="nombre" class="form-control bg-dark border-dark text-light" placeholder="Nombre" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control bg-dark border-dark text-light" placeholder="Email" required>
+            </div>
+            <div class="mb-4">
+              <textarea name="mensaje" rows="5" class="form-control bg-dark border-dark text-light" placeholder="Mensaje" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg px-4 py-2 animate-hover">
+                Enviar Mensaje <i class="bi bi-send-fill ms-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Estilos reutilizables (coherentes con el diseño anterior) */
+  .bg-dark-2 {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+  }
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+  .animate-hover {
+    transition: transform 0.2s ease;
+  }
+  .animate-hover:hover {
+    transform: scale(1.05);
+  }
+
+  /* Estilos específicos para el formulario */
+  .form-control {
+    padding: 10px 15px;
+  }
+  .form-control:focus {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #555;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+</style>
+                   
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/app.js}"></script>
+</body>
+</html>

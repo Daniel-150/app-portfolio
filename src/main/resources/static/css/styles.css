@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #121212;
+}
+header{
+   
+    width: 100%;
+    background: #121212;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding: 10px;
+}
+
+.hero {
+    height: 100vh;
+    text-align: center;
+}
+h1{
+    font-size: 50px;
+    color: #7c7c7c;
+}
+
+
+/* Estilos del botón */
+ .hamburger-btn {
+    width: 50px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    outline: none;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+/* Líneas de la hamburguesa */
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+/* Posición de las líneas (hamburguesa) */
+.hamburger-btn span:nth-child(1) {
+    top: 0;
+}
+.hamburger-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hamburger-btn span:nth-child(3) {
+    bottom: 0;
+}
+
+/* Transformación a X cuando está activo */
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Estilos del menú desplegable */
+.menu {
+    display: none; /* Oculta el menú inicialmente */
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #B0B0B0;
+    width: 40%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.menu.active {
+    display: block; /* Muestra el menú al hacer clic */
+}
+
+/* Estilos de la lista y enlaces */
+.menu  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #1E1E1E;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #070707;
+    font-size: 16px;
+    display: block;
+}
+
+.menu a:hover {
+    background: #f0f0f0;
+}
+
+.logo-contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 250px; /* Ajusta el tamaño según necesites */
+    height: 250px;
+    border-radius: 50%; /* Hace el div circular */
+    background-color: #121212; /* Mismo color que el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Recorta la imagen si sobresale */
+    border: 3px solid #333; /* Borde sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+.logo img{
+    width: 80%; /* Ajusta el tamaño de la imagen dentro del círculo */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    filter: brightness(0.9) contrast(1.1); /* Mejora la visibilidad en fondo oscuro */
+}
+
+/*
+h2{
+    color:#fff;
+    padding: 20px;
+    font-size: 60px;
+}*/
+
+.presentacion{
+    width: 90%;
+    padding: 20px;
+}
+
+h3{
+color:rgb(220, 241, 30);
+font-size: 40px;
+margin-bottom: 30px;
+
+}
+
+p{
+    color: #fff;
+    font-size: 20px;
+}
+/*
+.miTrabajo{
+    text-align: center;
+    margin-top: 50px;
+     background-color: #121212;
+}
+
+.grid-tarjetas{
+    display: grid;
+    grid-column: 1fr;
+    
+}
+
+.tarjetas{
+    width: 90%;
+    background: #afaf95;
+    padding: 20px;
+    display: grid;
+    grid-column: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.tarjetas img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tarjetas h4{
+ font-size: 30px;
+ color: brown;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-style:italic;
+}
+
+.tarjetas p{
+    display: none;
+    color: #121212;
+  
+}
+
+.tecnologias{
+    text-align: center;
+     background-color: #121212;
+}
+
+.tec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+h5{
+    color: #fff;
+    font-size: 30px;
+}
+
+.icono{
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    align-items: center;
+}
+
+.icono i{
+    color: #fff;
+    font-size: 80px;
+    width: 100%;
+}
+
+#html{
+    color: rgba(255, 68, 0, 0.712);
+}
+
+#css{
+    color:blue;
+}
+
+#java{
+    color: red;
+}
+#netbeans{
+    width: 100%;
+}
+.icono img{
+     width: 80px;
+     height: auto;
+}
+
+#git{
+    color: #ff2600;
+}
+*/
+.seccion-contacto {
+    background-color: #121212;
+    padding: 2rem;
+    border-radius: 10px;
+    
+    margin: 0 auto;
+  }
+  
+  .seccion-contacto h2 {
+    color: #3A86FF;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .seccion-contacto p {
+    color: #E0E0E0;
+    margin-bottom: 2rem;
+  }
+  
+  .contacto-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contacto-item {
+    background-color: #1E1E1E;
+    border: 1px solid #2D2D2D;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .contacto-item:hover {
+    transform: translateY(-5px);
+    border-color: #3A86FF;
+  }
+  
+  .icono-contacto {
+    background-color: #252525;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  
+  .icono-contacto i {
+    color: #3A86FF;
+    font-size: 1.5rem;
+  }
+  
+  .info-contacto h3 {
+    color: #FFFFFF;
+    margin: 0 0 0.3rem 0;
+  }
+  
+  .info-contacto a {
+    color: #B0B0B0;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .info-contacto a:hover {
+    color: #3A86FF;
+  }
+  
+  /* Estilos del formulario (opcional) */
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .formulario-contacto form{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    background-color: #2D2D2D;
+    border: 1px solid #2D2D2D;
+    border-radius: 5px;
+    padding: 0.9rem; 
+
+    padding-right: 40%;
+    color: #E0E0E0;
+    font-family: inherit;
+  }
+
+  
+  .formulario-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .formulario-contacto button {
+    background-color: #3A86FF;
+    color: white;
+    border: none;
+    padding: 10px 30%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .formulario-contacto button:hover {
+    background-color: #6E44FF;
+  }
+
+  /* Estilo para placeholders en inputs oscuros */
+.form-control::placeholder {
+  color: #8e8e8e !important; /* Gris medio para mejor legibilidad */
+  opacity: 1; /* Asegura que no sea transparente */
+}
+
+/* Si usas textareas u otros elementos */
+textarea::placeholder {
+  color: #8e8e8e !important;
+}
